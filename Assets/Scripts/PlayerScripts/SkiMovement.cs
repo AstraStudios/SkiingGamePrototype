@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SkiMovement : MonoBehaviour
 {
+    // Basic explanation:
+    // Current direction just gets a number based off of button pressed so you dont have to hold down buttons
+    // Just adds force to the different sides, so turning feels a little muggy but thats ok.
     int currentDirection;
 
     float vertSpeed;
@@ -16,9 +19,9 @@ public class SkiMovement : MonoBehaviour
     {
         currentDirection = 1;
         rb2D = gameObject.GetComponent<Rigidbody2D>();
-        //Skip like these for development
-        vertSpeed = .5f * Time.deltaTime;
-        horizSpeed = .5f * Time.deltaTime;
+        //Keep low for development
+        vertSpeed = 1f * Time.deltaTime;
+        horizSpeed = 4f * Time.deltaTime;
     }
 
     // Update is called once per frame
@@ -55,11 +58,12 @@ public class SkiMovement : MonoBehaviour
         }
         if (currentDirection == 2)
         {
-            rb2D.AddForce(new Vector2(-horizSpeed, -vertSpeed));
+            // If needed to revert,instead of 0 put -vertSpeed
+            rb2D.AddForce(new Vector2(-horizSpeed, 0));
         }
         if (currentDirection == 3)
         {
-            rb2D.AddForce(new Vector2(horizSpeed, -vertSpeed));
+            rb2D.AddForce(new Vector2(horizSpeed, 0));
         }
     }
 }
