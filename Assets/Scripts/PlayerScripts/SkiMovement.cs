@@ -6,8 +6,8 @@ public class SkiMovement : MonoBehaviour
 {
     int currentDirection;
 
-    float vertSpeed = .5f;
-    float horizSpeed = 2f;
+    float vertSpeed;
+    float horizSpeed;
 
     Rigidbody2D rb2D;
 
@@ -16,6 +16,9 @@ public class SkiMovement : MonoBehaviour
     {
         currentDirection = 1;
         rb2D = gameObject.GetComponent<Rigidbody2D>();
+        //Skip like these for development
+        vertSpeed = .5f * Time.deltaTime;
+        horizSpeed = .5f * Time.deltaTime;
     }
 
     // Update is called once per frame

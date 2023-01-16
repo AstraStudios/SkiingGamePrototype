@@ -27,7 +27,7 @@ public class SwitchPlayerSprite : MonoBehaviour
     void GetSpriteNum()
     {
         //Forward facing
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             currentSprite = 1;
         }
