@@ -15,7 +15,8 @@ public class RandomRunSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SelectTreeType();
+        SpawnTrees();
+
     }
 
     // Update is called once per frame
@@ -24,12 +25,12 @@ public class RandomRunSpawner : MonoBehaviour
         
     }
 
-    void SelectTreeType()
+    void SpawnTrees()
     {
         for(int i = 0; i < 100; i++)
         {
-            spawnXAxis = Random.Range(-50, 50);
-            spawnYAxis = Random.Range(0, -200);
+            spawnXAxis = Random.Range(-20, 20);
+            spawnYAxis = Random.Range(0, -50);
             treeStyle = Random.Range(0, 4);
             switch(treeStyle)
             {
