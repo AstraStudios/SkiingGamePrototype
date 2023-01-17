@@ -59,11 +59,11 @@ public class SkiMovement : MonoBehaviour
         if (currentDirection == 2)
         {
             // If needed to revert,instead of 0 put -vertSpeed
-            rb2D.AddForce(new Vector2(-horizSpeed, 0));
+            rb2D.AddForce(new Vector2(-horizSpeed, -vertSpeed));
         }
         if (currentDirection == 3)
         {
-            rb2D.AddForce(new Vector2(horizSpeed, 0));
+            rb2D.AddForce(new Vector2(horizSpeed, -vertSpeed));
         }
     }
 }

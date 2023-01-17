@@ -31,11 +31,11 @@ public class RandomRunSpawner : MonoBehaviour
 
     void SpawnTrees()
     {
-        for(int i = 0; i < 100; i++)
+        for(int i = 0; i < 125; i++)
         {
             //Maybe make more tight
             spawnXAxis = Random.Range(-15, 15);
-            spawnYAxis = Random.Range(0, -50);
+            spawnYAxis = Random.Range(0, -165);
             treeStyle = Random.Range(0, 4);
             switch(treeStyle)
             {
@@ -62,7 +62,7 @@ public class RandomRunSpawner : MonoBehaviour
             float spawnXAxis;
             float spawnYAxis;
             spawnXAxis = Random.Range(-15, 15);
-            spawnYAxis = Random.Range(0, -50);
+            spawnYAxis = Random.Range(0, -165);
             switch(bushStyle)
             {
                 case 1:

@@ -410,8 +410,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881291925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalPosition: {x: 0, y: -78.546, z: 0}
+  m_LocalScale: {x: 30.86, y: 175, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -459,9 +459,9 @@ MonoBehaviour:
   treeStyleOne: {fileID: 5783229026293706846, guid: 17e37dddc6db944e5898117dcbdc0531, type: 3}
   treeStyleTwo: {fileID: 4515641488792489472, guid: 625f39d1a438043d8ab15018dbbb9c3a, type: 3}
   treeStyleThree: {fileID: 7224082498121317456, guid: 584f5ee006d9b4ef0b643690f411e574, type: 3}
-  bushStyleOne: {fileID: 0}
-  bushStyleTwo: {fileID: 0}
-  bushStyleThree: {fileID: 0}
+  bushStyleOne: {fileID: 7348803211505646142, guid: cb1c06a08b8fa4f63b108d6370b1fea9, type: 3}
+  bushStyleTwo: {fileID: 4597859747930891340, guid: 04430257bedf84f11bba07ce34b188aa, type: 3}
+  bushStyleThree: {fileID: 1567437066106277060, guid: fc7fca498e4fb4e979adef28d5ccc5a6, type: 3}
 --- !u!4 &956221062
 Transform:
   m_ObjectHideFlags: 0
