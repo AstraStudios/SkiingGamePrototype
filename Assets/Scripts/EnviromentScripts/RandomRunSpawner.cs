@@ -31,7 +31,7 @@ public class RandomRunSpawner : MonoBehaviour
 
     void SpawnTrees()
     {
-        for(int i = 0; i < 125; i++)
+        for(int i = 0; i < 150; i++)
         {
             //Maybe make more tight
             spawnXAxis = Random.Range(-15, 15);

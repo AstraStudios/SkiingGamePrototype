@@ -12,6 +12,9 @@ public class SkiMovement : MonoBehaviour
     float vertSpeed;
     float horizSpeed;
 
+    float currentSpeedHoriz;
+    float currentSpeedVert;
+
     Rigidbody2D rb2D;
 
     // Start is called before the first frame update
@@ -21,7 +24,7 @@ public class SkiMovement : MonoBehaviour
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         //Keep low for development
         vertSpeed = 1f * Time.deltaTime;
-        horizSpeed = 4f * Time.deltaTime;
+        horizSpeed = 1f * Time.deltaTime;
     }
 
     // Update is called once per frame
@@ -54,16 +57,40 @@ public class SkiMovement : MonoBehaviour
     {
         if (currentDirection == 1)
         {
-            rb2D.AddForce(new Vector2(0, -vertSpeed));
+            currentSpeedVert += -vertSpeed * Time.deltaTime;
+            if (currentSpeedVert < 3f)
+            {
+                rb2D.AddForce(new Vector2(0, -vertSpeed));
+            }
+            if (currentSpeedVert > 3f)
+            {
+                return;
+            }
         }
         if (currentDirection == 2)
         {
             // If needed to revert,instead of 0 put -vertSpeed
-            rb2D.AddForce(new Vector2(-horizSpeed, -vertSpeed));
+            currentSpeedHoriz += -horizSpeed * Time.deltaTime;
+            if (currentSpeedHoriz < 5f)
+            {
+                rb2D.AddForce(new Vector2(-horizSpeed, -vertSpeed));
+            }
+            if (currentSpeedHoriz > 5f)
+            {
+                return;
+            }
         }
         if (currentDirection == 3)
         {
-            rb2D.AddForce(new Vector2(horizSpeed, -vertSpeed));
+            currentSpeedHoriz += horizSpeed * Time.deltaTime;
+            if (currentSpeedHoriz < 5f)
+            {
+                rb2D.AddForce(new Vector2(horizSpeed, -vertSpeed));
+            }
+            if (currentSpeedHoriz > 5f)
+            {
+                return;
+            }
         }
     }
 }
